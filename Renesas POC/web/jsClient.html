@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>JS SOCKET CLIENT</div>
+        
+        <input type="button" onclick="connect()" value = "Connect"/>
+        <div id = "msg"></div>
+        <script type = "text/javascript">
+         function connect() {
+            var msg = document.getElementById("msg");
+            if ("WebSocket" in window) {
+               //alert("WebSocket is supported by your Browser!");
+               
+               // Let us open a web socket
+               var ws = new WebSocket("ws://localhost:5056");
+				
+               ws.onopen = function() {
+                  msg.innerHTML = "Connected to server"
+                  // Web Socket is connected, send data using send()
+                  //ws.send("Date"); 
+                  //alert("Message is sent...");
+               };
+				
+               ws.onmessage = function (evt) { 
+                  var received_msg = evt.data;
+                  //msg.innerHTML += received_msg;
+        //alert("Message is received...");
+               };
+				
+               ws.onclose = function() { 
+                  
+                  // websocket is closed.
+                  alert("Connection is closed..."); 
+               };
+               
+            } else {
+              
+               // The browser doesn't support WebSocket
+               alert("WebSocket NOT supported by your Browser!");
+            }
+         }
+      </script>
+    </body>
+    
+</html>

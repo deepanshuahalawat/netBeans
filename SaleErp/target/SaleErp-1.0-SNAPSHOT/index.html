@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add Party</title>
+        <meta charset="utf-8">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel ="stylesheet" href="css/css.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+            <div class="container-fluid">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">TECHNOFARM</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Disabled</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="row" >
+            <div class="col-lg-2">
+                <div class="row "> <div class="btn btn-lg btn-info full-wdth">ADD PARTY</div></div>
+                <div class="row "> <div class="btn btn-lg btn-info full-wdth">SEARCH PARTY</div></div>
+                <div class="row "> <div class="btn btn-lg btn-info full-wdth">ADD ENTRY</div></div>
+                <div class="row "> <div class="btn btn-lg btn-info full-wdth">KHARCHA</div></div>
+                <div class="row "> <div class="btn btn-lg btn-info full-wdth">ADD PRODUCT</div></div>
+                <div class="row "> <div class="btn btn-lg btn-info full-wdth">ADD COMPONENT</div></div>
+                <div class="row "> <div class="btn btn-lg btn-info full-wdth">SALARY</div></div>
+                <div class="row "> <div class="btn btn-lg btn-info full-wdth">STOCK VIEW</div></div>
+                <div class="row "> <div class="btn btn-lg btn-info full-wdth">SALE VIEW</div></div>
+                <div class="row "> <div class="btn btn-lg btn-info full-wdth">PURCHASE VIEW</div></div>
+            </div>
+            <div class="col-lg-10">
+                <div class="jumbotron ">
+                    <h1 class="display-4">ADD PARTY DETAILS</h1>
+                    <p class="lead">
+                        Add party details SALES or PURCHASE
+                    </p>
+
+
+                </div>
+                <form class="form-horizontal" action="/SaveParty">
+                    <div class="row form-group">
+                        <label class="control-label col-sm-2 h3" for="name">NAME</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control h3" id="name" placeholder="Party Name">
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label class="control-label col-sm-2 h3" for="address">ADDRESS</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control h3" id="address" placeholder="Party Address">
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label class="control-label col-sm-2 h3" for="city">CITY</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control h3" id="city" placeholder="Party CITY/Market">
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label class="control-label col-sm-2 h3" for="phone">PHONE</label>
+                        <div class="col-sm-10">
+                            <input type="number" class="form-control h3" id="phone" placeholder="Mobile no">
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label class="control-label col-sm-2 h3">PARTY TYPE</label>
+                        <div class="col-sm-10">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="partyType" id="gridRadios1" value="option1" checked>
+                                <label class="form-check-label" for="gridRadios1">
+                                    SALES
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="partyType" id="gridRadios2" value="option2">
+                                <label class="form-check-label" for="gridRadios2">
+                                    PURCHASE
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="partyType" id="gridRadios2" value="option2">
+                                <label class="form-check-label" for="gridRadios2">
+                                    BOTH
+                                </label>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label class="control-label col-sm-2 h3" for="desc">VIVRAN</label>
+                        <div class="col-sm-10">
+                            <textarea class="form-control h3" id="desc" placeholder="Details" rows="5"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-10">
+                            <button type="submit" class="btn btn-success">Submit</button>
+                        </div>
+                    </div>
+                </form> 
+            </div>
+        </div>
+    </body>
+</html>
